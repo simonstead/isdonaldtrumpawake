@@ -23,9 +23,11 @@ const TrumpCalculator = (tweet) => {
   const localNow = moment().utcOffset(-5)
   let awake = "Yes"
 
+  console.log(moment().hours(22));
+
   console.log(localNow.hours(), diff);
   // if it is night time for donald, then he's probably asleep
-  if ((localNow.hours() >= 10 || localNow.hours() < 6) && diff >=2) {
+  if ((localNow.hours() >= 22 || localNow.hours() < 6) && diff >=2) {
     awake = "No"
   }
 
