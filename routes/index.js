@@ -17,14 +17,15 @@ var Twitter = new TwitterPackage(secret);
 
 const TrumpCalculator = (tweet) => {
   const tweetTime = moment(tweet.created_at)
-  const diff = tweetTime.diff(moment(), 'hours');
+  const diff = moment().diff(tweetTime, 'hours');
   const localTweetTime = tweetTime.utcOffset(-5);
   const message = 'Donald Trump tweeted ' + tweetTime.fromNow();
-
+  const localNow = moment().utcOffset(-5)
   let awake = "Yes"
 
+  console.log(localNow.hours(), diff);
   // if it is night time for donald, then he's probably asleep
-  if ((localTweetTime.hours() >= 10 || localTweetTime.hours() < 6) && diff >=2) {
+  if ((localNow.hours() >= 10 || localNow.hours() < 6) && diff >=2) {
     awake = "No"
   }
 
