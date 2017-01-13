@@ -1,0 +1,19 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif; }
+
+a {
+  color: #00B7FF; }
+
+h1 {
+  font-size: 4em; }
+
+h2 {
+  font-size: 2em; }
+
+.bool {
+  font-size: 10em;
+  font-weight: bold; }
+
+/*# sourceMappingURL=style.css.map */
