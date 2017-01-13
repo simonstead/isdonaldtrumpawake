@@ -24,7 +24,7 @@ const TrumpCalculator = (tweet) => {
   let awake = "Yes"
 
   // if it is night time for donald, then he's probably asleep
-  if ((localTweetTime.hours() >= 11 || localTweetTime.hours() < 6) && diff >=2) {
+  if ((localTweetTime.hours() >= 10 || localTweetTime.hours() < 6) && diff >=2) {
     awake = "No"
   }
 
